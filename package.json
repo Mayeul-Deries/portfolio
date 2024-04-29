@@ -5,13 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc --noEmit && vite build"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@vueuse/motion": "^2.1.0",
+    "aos": "^2.3.4",
+    "hamburgers": "^1.2.1",
     "roboto-fontface": "*",
+    "scrollreveal": "^4.0.9",
     "vue": "^3.4.21",
+    "vue-scroll-reveal": "2",
     "vuetify": "^3.5.8"
   },
   "devDependencies": {
@@ -21,6 +25,7 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
     "sass": "^1.71.1",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.2",
