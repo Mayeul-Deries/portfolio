@@ -30,11 +30,11 @@
   </div>
   <div class="tw-px-12 sm:tw-px-24 max-xs:tw-pb-20" ref="formations">
     <h2 class="tw-text-3xl tw-font-semibold tw-font-body max-xs:-tw-mb-16">Formations</h2>
-
     <Timeline />
   </div>
-  <div class="tw-px-12 sm:tw-px-24 tw-pb-20" ref="projects">
-    <h2 class="tw-text-3xl tw-font-semibold tw-font-body">Projets</h2>
+  <div class="tw-pb-20" ref="projects">
+    <h2 class="tw-px-12 sm:tw-px-24 tw-text-3xl tw-font-semibold tw-font-body">Projets</h2>
+    <Projects class="tw-px-14" />
   </div>
   <div class="tw-px-12 sm:tw-px-24 tw-pb-20" ref="skills">
     <h2 class="tw-text-3xl tw-font-semibold tw-font-body">Compétences</h2>
@@ -45,7 +45,7 @@
 <script setup lang="ts">
 import Banner from '../components/Banner.vue'
 import Timeline from '../components/Timeline.vue'
-
+import Projects from '../components/Projects.vue'
 import Skills from '../components/Skills.vue'
 import { mdiChevronDown, mdiGithub, mdiLinkedin, mdiEmail } from '@mdi/js'
 

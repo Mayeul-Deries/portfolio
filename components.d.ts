@@ -10,6 +10,7 @@ declare module 'vue' {
     Banner: typeof import('./src/components/Banner.vue')['default']
     GlowCard: typeof import('./src/components/UI/GlowCard.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Projects: typeof import('./src/components/Projects.vue')['default']
     Skills: typeof import('./src/components/Skills.vue')['default']
     Timeline: typeof import('./src/components/Timeline.vue')['default']
   }
