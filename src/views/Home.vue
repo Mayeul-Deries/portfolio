@@ -56,7 +56,13 @@ const openLink = (url: string) => {
 function scrollToSection(sectionId) {
   const el = document.getElementById(sectionId)
   if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const headerOffset = 78
+    const elementPosition = el.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.scrollY - headerOffset
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    })
   }
 }
 </script>
