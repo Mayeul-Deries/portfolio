@@ -1,5 +1,5 @@
 <template>
-  <Banner :parent-refs="$refs" />
+  <Banner @scroll="scrollToSection" />
   <div class="tw-px-12 tw-pt-36 tw-pb-52 sm:tw-pb-48 md:tw-pb-44 sm:tw-px-24 md:tw-px-36 lg:tw-px-60">
     <h1 class="tw-text-4xl sm:tw-text-5xl md:tw-text-6xl tw-mb-2 md:tw-mb-4 tw-font-heading tw-font-body mayeul">
       Mayeul Deries
@@ -28,15 +28,15 @@
       </v-btn>
     </div>
   </div>
-  <div class="tw-px-12 sm:tw-px-24 max-xs:tw-pb-20" ref="formations">
+  <div class="tw-px-12 sm:tw-px-24 max-xs:tw-pb-20" id="formations">
     <h2 class="tw-text-3xl tw-font-semibold tw-font-body max-xs:-tw-mb-16">Formations</h2>
     <Timeline />
   </div>
-  <div class="tw-pb-20" ref="projects">
+  <div class="tw-pb-20" id="projects">
     <h2 class="tw-px-12 sm:tw-px-24 tw-text-3xl tw-font-semibold tw-font-body">Projets</h2>
     <Projects class="tw-px-14" />
   </div>
-  <div class="tw-px-12 sm:tw-px-24 tw-pb-20" ref="skills">
+  <div class="tw-px-12 sm:tw-px-24 tw-pb-20" id="skills">
     <h2 class="tw-text-3xl tw-font-semibold tw-font-body">Compétences</h2>
     <Skills />
   </div>
@@ -51,6 +51,13 @@ import { mdiChevronDown, mdiGithub, mdiLinkedin, mdiEmail } from '@mdi/js'
 
 const openLink = (url: string) => {
   window.open(url, '_blank')
+}
+
+function scrollToSection(sectionId) {
+  const el = document.getElementById(sectionId)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
 </script>
 

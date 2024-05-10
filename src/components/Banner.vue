@@ -1,30 +1,24 @@
 <script setup lang="ts">
-import { useTheme } from "vuetify";
-import { mdiBrightness6 } from "@mdi/js";
+import { useTheme } from 'vuetify'
+import { mdiBrightness6 } from '@mdi/js'
 
-const theme = useTheme();
+const theme = useTheme()
 const menuItems = [
-  { title: "Formations", icon: "mdiSchool", path: "formations" },
-  { title: "Projets", icon: "mdiBook", path: "projects" },
-  { title: "Compétences", icon: "mdiToolbox", path: "skills" },
-];
+  { title: 'Formations', icon: 'mdiSchool', path: 'formations' },
+  { title: 'Projets', icon: 'mdiBook', path: 'projects' },
+  { title: 'Compétences', icon: 'mdiToolbox', path: 'skills' },
+]
 
-const props = defineProps<{
-  parentRefs: Object;
-}>();
+const emits = defineEmits<{
+  (e: 'scroll', values: any): void
+}>()
 
-function toggleTheme() {
-  theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
+function scrollToSection(path: any) {
+  emits('scroll', path)
 }
 
-function clickListItem(item, id) {
-  this.selectedItemIndex = id;
-
-  const refName = item.path;
-  const el = props.parentRefs[refName];
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
-  }
+function toggleTheme() {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 }
 </script>
 
@@ -47,12 +41,9 @@ function clickListItem(item, id) {
   </v-navigation-drawer> -->
 
   <v-app-bar :elevation="2" class="tw-shadow-lg tw-shadow-indigo-500/40">
-    <!-- <template class="tw-block sm:tw-hidden" v-slot:prepend>
-      <v-app-bar-nav-icon @click="sidebar = !sidebar"></v-app-bar-nav-icon>
-    </template> -->
     <div v-for="(item, i) in menuItems" :key="i" :value="item">
       <v-app-bar-title
-        @click="clickListItem(item, i)"
+        @click="scrollToSection(item.path)"
         class="tw-cursor-pointer tw-mx-2 sm:tw-mx-6 tw-font-semibold tw-font-body navbar-item"
         >{{ item.title }}</v-app-bar-title
       >
@@ -76,13 +67,15 @@ function clickListItem(item, id) {
 .navbar-item:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   left: 50%;
   background: #6366f1;
   position: absolute;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition:
+    width 0.3s ease 0s,
+    left 0.3s ease 0s;
   width: 0;
 }
 .navbar-item:hover:after {
