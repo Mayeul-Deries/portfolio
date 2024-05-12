@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify'
 import { mdiBrightness6 } from '@mdi/js'
+import { onMounted, onUnmounted, ref } from 'vue'
 
+const isMenuOpen = ref(false)
 const theme = useTheme()
 const menuItems = [
   { title: 'Formations', icon: 'mdiSchool', path: 'formations' },
@@ -15,7 +17,35 @@ const emits = defineEmits<{
 
 function scrollToSection(path: any) {
   emits('scroll', path)
+  toggleMenu()
 }
+
+function toggleMenu() {
+  const bar = document.querySelector('.bar')
+  const hamburger = document.querySelector('.hamburger')
+  if (bar && hamburger) {
+    bar.classList.toggle('is-active')
+    hamburger.classList.toggle('is-active')
+    if (theme.global.current.value.dark) {
+      hamburger.classList.toggle('dark-active')
+    }
+    isMenuOpen.value = !isMenuOpen.value
+  }
+}
+
+const handleScreenSizeChange = () => {
+  if (window.innerWidth > 768 && isMenuOpen.value) {
+    toggleMenu()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('resize', handleScreenSizeChange)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleScreenSizeChange)
+})
 
 function toggleTheme() {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
@@ -23,30 +53,30 @@ function toggleTheme() {
 </script>
 
 <template>
-  <!-- <v-navigation-drawer v-model="sidebar" app>
-    <v-list>
-      <v-list-item
-        v-for="(item, i) in menuItems"
-        :key="i"
-        :value="item"
-        color="primary"
-      >
-        <template v-slot:prepend>
-          <v-icon>{{ item.icon }}</v-icon>
-        </template>
-
-        <v-list-item-title v-text="item.title"></v-list-item-title>
-      </v-list-item>
-    </v-list>
-  </v-navigation-drawer> -->
-
-  <v-app-bar :elevation="2" class="tw-shadow-lg tw-shadow-indigo-500/40">
-    <div v-for="(item, i) in menuItems" :key="i" :value="item">
+  <v-app-bar :elevation="2" class="tw-shadow-lg tw-shadow-indigo-500/40 bar">
+    <div class="tw-hidden md:tw-block" v-for="(item, i) in menuItems" :key="i" :value="item">
       <v-app-bar-title
         @click="scrollToSection(item.path)"
         class="tw-cursor-pointer tw-mx-2 sm:tw-mx-6 tw-font-semibold tw-font-body navbar-item"
         >{{ item.title }}</v-app-bar-title
       >
+    </div>
+    <button
+      class="tw-block md:tw-hidden hamburger hamburger--squeeze"
+      :class="{ 'dark-theme': theme.global.current.value.dark }"
+      type="button"
+      @click="toggleMenu"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="tw-block md:tw-hidden mobile-menu" v-if="isMenuOpen">
+      <div v-for="(item, index) in menuItems" :key="index" @click="scrollToSection(item.path)">
+        <span class="navbar-item">
+          {{ item.title }}
+        </span>
+      </div>
     </div>
     <v-spacer />
     <v-btn flat :icon="mdiBrightness6" @click="toggleTheme"></v-btn>
@@ -54,13 +84,6 @@ function toggleTheme() {
 </template>
 
 <style scoped>
-.navbar-item:hover {
-  position: relative;
-  will-change: filter;
-  transition: filter 300ms;
-  filter: drop-shadow(blue 0 0 15px);
-}
-
 .navbar-item {
   position: relative;
 }
@@ -81,5 +104,27 @@ function toggleTheme() {
 .navbar-item:hover:after {
   width: 100%;
   left: 0;
+}
+
+.bar {
+  height: 64px;
+  transition: height 0.3s ease;
+  position: relative;
+}
+
+.bar.is-active {
+  height: 100%;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: xx-large;
 }
 </style>

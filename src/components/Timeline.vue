@@ -20,9 +20,9 @@ const vScrollReveal = createScrollRevealDirective({
 <template>
   <div class="tw-w-full tw-relative tw-py-4 xs:tw-py-16">
     <div class="ligne tw-invisible xs:tw-visible" :class="couleur"></div>
-    <div class="rond r1 tw-invisible xs:tw-visible" :class="couleur"></div>
-    <div class="rond r2 tw-invisible xs:tw-visible" :class="couleur"></div>
-    <div class="rond r3 tw-invisible xs:tw-visible" :class="couleur"></div>
+    <div class="rond r1 tw-hidden xs:tw-block" :class="couleur"></div>
+    <div class="rond r2 tw-hidden xs:tw-block" :class="couleur"></div>
+    <div class="rond r3 tw-hidden xs:tw-block" :class="couleur"></div>
 
     <v-card elevation="8" class="card c1" v-scroll-reveal>
       <h3 class="tw-text-center tw-pb-4">BUT Informatique</h3>
@@ -81,13 +81,13 @@ const vScrollReveal = createScrollRevealDirective({
   transform: translate(-50%);
 }
 .r1 {
-  top: 184px;
+  top: 189px;
 }
 .r2 {
-  top: 452px;
+  top: 472px;
 }
 .r3 {
-  top: 730px;
+  top: 745px;
 }
 
 .card {
@@ -102,15 +102,15 @@ const vScrollReveal = createScrollRevealDirective({
 }
 
 .c1 {
-  top: 84px;
+  top: 99px;
   left: calc(50% - 270px);
 }
 .c2 {
-  top: 334px;
+  top: 354px;
   left: calc(50% + 270px);
 }
 .c3 {
-  top: 660px;
+  top: 665px;
   left: calc(50% - 270px);
 }
 
