@@ -1,12 +1,8 @@
 <template>
   <Banner @scroll="scrollToSection" />
-  <div class="tw-px-12 tw-pt-36 tw-pb-52 sm:tw-pb-48 md:tw-pb-44 sm:tw-px-24 md:tw-px-36 lg:tw-px-60">
-    <h1 class="tw-text-4xl sm:tw-text-5xl md:tw-text-6xl tw-mb-2 md:tw-mb-4 tw-font-heading tw-font-body mayeul">
-      Mayeul Deries
-    </h1>
-    <h2 class="tw-text-2xl sm:tw-text-3xl md:tw-text-4xl tw-mb-2 tw-font-normal tw-font-body">
-      Alternant développeur web
-    </h2>
+  <div class="tw-px-12 tw-pt-32 xl:tw-pt-20 tw-pb-52 sm:tw-pb-48 md:tw-pb-44 sm:tw-px-24 md:tw-px-36 lg:tw-px-60">
+    <h1 class="tw-mb-2 tw-font-heading tw-font-body name">Mayeul Deries</h1>
+    <h2 class="tw-mb-2 tw-font-normal tw-font-body status">Alternant développeur web</h2>
     <div class="tw-h-20">
       <v-icon class="down-arrow" size="48" :icon="mdiChevronDown"></v-icon>
     </div>
@@ -68,6 +64,13 @@ function scrollToSection(sectionId) {
 </script>
 
 <style scoped>
+.name {
+  font-size: 7vw;
+}
+.status {
+  font-size: 3.5vw;
+}
+
 .down-arrow {
   height: 40px;
   animation: jumpInfinite 1s infinite;

@@ -17,7 +17,9 @@ const emits = defineEmits<{
 
 function scrollToSection(path: any) {
   emits('scroll', path)
-  toggleMenu()
+  if (window.innerWidth <= 768) {
+    toggleMenu()
+  }
 }
 
 function toggleMenu() {
