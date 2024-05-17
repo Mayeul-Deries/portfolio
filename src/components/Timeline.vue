@@ -19,7 +19,9 @@ const vScrollReveal = createScrollRevealDirective({
 
 <template>
   <div class="tw-w-full tw-relative tw-py-4 xs:tw-py-16">
-    <div class="ligne tw-invisible xs:tw-visible" :class="couleur"></div>
+    <div class="line-height">
+      <div class="ligne tw-hidden xs:tw-block" :class="couleur"></div>
+    </div>
     <div class="rond r1 tw-hidden xs:tw-block" :class="couleur"></div>
     <div class="rond r2 tw-hidden xs:tw-block" :class="couleur"></div>
     <div class="rond r3 tw-hidden xs:tw-block" :class="couleur"></div>
@@ -62,6 +64,9 @@ const vScrollReveal = createScrollRevealDirective({
 </template>
 
 <style scoped>
+.line-height {
+  height: 836px;
+}
 .ligne {
   height: 836px;
   width: 8px;

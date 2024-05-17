@@ -19,7 +19,7 @@
           <span class="tw-font-semibold tw-text-lg">Technologies utilisées :</span>
           <ul>
             <li>
-              Frontend : <strong>React Native</strong> pour le développement des interfaces utilisateurs combiné avec la
+              Frontend : <strong>React</strong> pour le développement des interfaces utilisateurs combiné avec la
               bibliothèque <strong>Styled Components</strong> pour le style
             </li>
             <li>Backend : Api crée avec <strong>Express</strong> et l'environement <strong>Node.js</strong></li>
