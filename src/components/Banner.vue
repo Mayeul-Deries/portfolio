@@ -51,6 +51,9 @@ onUnmounted(() => {
 
 function toggleTheme() {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+  if (isMenuOpen.value) {
+    toggleMenu()
+  }
 }
 </script>
 
