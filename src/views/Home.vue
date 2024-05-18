@@ -1,7 +1,7 @@
 <template>
   <Banner @scroll="scrollToSection" />
   <div class="tw-max-w-screen-xl tw-m-auto">
-    <div class="tw-px-12 tw-pt-32 xl:tw-pt-20 tw-pb-52 sm:tw-pb-48 md:tw-pb-44 sm:tw-px-24 md:tw-px-36 lg:tw-px-60">
+    <div class="tw-px-12 tw-pt-32 xl:tw-pt-20 tw-pb-52 sm:tw-pb-48 md:tw-pb-44 sm:tw-px-24 md:tw-px-36">
       <h1 class="tw-mb-2 tw-font-heading tw-font-body name">Mayeul Deries</h1>
       <h2 class="tw-mb-2 tw-font-normal tw-font-body status">Alternant développeur web</h2>
       <div class="tw-h-20">
@@ -67,10 +67,10 @@ function scrollToSection(sectionId) {
 
 <style scoped>
 .name {
-  font-size: 7vw;
+  font-size: 6vw;
 }
 .status {
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 
 .down-arrow {
