@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify'
-import { mdiBrightness6 } from '@mdi/js'
+import { mdiBrightness6, mdiCircleHalfFull } from '@mdi/js'
 import { onMounted, onUnmounted, ref } from 'vue'
 
 const isMenuOpen = ref(false)
 const theme = useTheme()
 const menuItems = [
-  { title: 'Formations', icon: 'mdiSchool', path: 'formations' },
+  { title: 'Parcours', icon: 'mdiSchool', path: 'parcours' },
   { title: 'Projets', icon: 'mdiBook', path: 'projects' },
   { title: 'Compétences', icon: 'mdiToolbox', path: 'skills' },
 ]
@@ -84,7 +84,7 @@ function toggleTheme() {
       </div>
     </div>
     <v-spacer />
-    <v-btn flat :icon="mdiBrightness6" @click="toggleTheme"></v-btn>
+    <v-btn flat :icon="mdiCircleHalfFull" @click="toggleTheme"></v-btn>
   </v-app-bar>
 </template>
 

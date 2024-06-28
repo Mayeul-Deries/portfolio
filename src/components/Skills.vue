@@ -53,7 +53,7 @@
         </svg>
         <p class="tw-text-lg tw-font-semibold">Tailwind CSS</p>
         <p class="tw-text-sm tw-text-muted-foreground">
-          <span class="tw-text-sm">Je maitrise Tailwind CSS depuis plus d'un 1 an.</span>
+          <span class="tw-text-sm">Je maîtrise Tailwind CSS depuis plus d'un an.</span>
         </p>
       </div>
     </v-card>
@@ -93,7 +93,7 @@
         </svg>
         <p class="tw-text-lg tw-font-semibold">TypeScript</p>
         <p class="tw-text-sm tw-text-muted-foreground">
-          <span class="tw-text-sm">TypeScript est comme ma deuxième langue</span>
+          <span class="tw-text-sm">TypeScript est comme ma deuxième langue.</span>
         </p>
       </div>
     </v-card>
@@ -127,7 +127,7 @@
 
         <p class="tw-text-lg tw-font-semibold">Node</p>
         <p class="tw-text-sm tw-text-muted-foreground">
-          <span class="tw-text-sm">Je travaille beaucoup avec Node</span>
+          <span class="tw-text-sm">Je travaille beaucoup avec Node.</span>
         </p>
       </div>
     </v-card>
@@ -172,7 +172,7 @@
 
         <p class="tw-text-lg tw-font-semibold">Backend</p>
         <p class="tw-text-sm tw-text-muted-foreground">
-          <span class="tw-text-sm">J'utilise différentes technologies backend</span>
+          <span class="tw-text-sm">Je connais différentes technologies backend.</span>
         </p>
       </div>
     </v-card>
@@ -220,7 +220,7 @@
         </svg>
         <p class="tw-text-lg tw-font-semibold">Bases de données</p>
         <p class="tw-text-sm tw-text-muted-foreground">
-          <span class="tw-text-sm">Je maitrise différentes bases de données</span>
+          <span class="tw-text-sm">Je maîtrise différentes bases de données.</span>
         </p>
       </div>
     </v-card>
@@ -267,7 +267,7 @@
         </svg>
         <p class="tw-text-lg tw-font-semibold">Systèmes d'exploitation</p>
         <p class="tw-text-sm tw-text-muted-foreground">
-          <span class="tw-text-sm">Je suis à l'aise sous Windows et Linux</span>
+          <span class="tw-text-sm">Je suis à l'aise sous Windows et Linux.</span>
         </p>
       </div>
     </v-card>

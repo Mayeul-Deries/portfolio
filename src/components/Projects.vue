@@ -19,11 +19,11 @@
           <span class="tw-font-semibold tw-text-lg">Technologies utilisées :</span>
           <ul>
             <li>
-              Frontend : <strong>React</strong> pour le développement des interfaces utilisateurs combiné avec la
+              Frontend : <strong>React</strong> pour le développement des interfaces utilisateur combiné avec la
               bibliothèque <strong>Styled Components</strong> pour le style
             </li>
-            <li>Backend : Api crée avec <strong>Express</strong> et l'environement <strong>Node.js</strong></li>
-            <li>Base de donnée non relationnelle <strong>MongoDB</strong></li>
+            <li>Backend : Api crée avec <strong>Express</strong> et l'environnement <strong>Node.js</strong></li>
+            <li>Base de donnée non-relationnelle <strong>MongoDB</strong></li>
           </ul>
         </div>
       </div>
@@ -47,6 +47,7 @@
           <ul>
             <li>Frontend : Le framework <strong>Flutter</strong></li>
             <li>Backend : Le langage <strong>Dart</strong></li>
+            <li>Stockage des données dans le <strong>LocalStorage</strong></li>
           </ul>
         </div>
       </div>
