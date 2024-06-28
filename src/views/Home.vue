@@ -55,7 +55,6 @@ import Timeline from '../components/Timeline.vue'
 import Projects from '../components/Projects.vue'
 import Skills from '../components/Skills.vue'
 import { mdiChevronDown, mdiGithub, mdiLinkedin, mdiEmail, mdiFile } from '@mdi/js'
-import { link } from 'fs'
 
 const openLink = (url: string) => {
   window.open(url, '_blank')
