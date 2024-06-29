@@ -9,7 +9,7 @@
       </div>
       <p class="tw-mb-6 tw-font-body">
         Actuellement étudiant en BUT Informatique à Grenoble, je termine ma formation en alternance cette année au sein
-        de <a href="gtrsuite.com" class="tw-no-underline tw-text-green-700">GTRsuite</a>. En tant qu'alternant
+        de GTRsuite. En tant qu'alternant
         développeur web, j'ai l'opportunité de travailler en méthode agile Scrum sur le développement d'une plateforme
         de Drive-To-Store, tant sur l'aspect frontend que backend.
       </p>
