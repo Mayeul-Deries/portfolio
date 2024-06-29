@@ -1,7 +1,7 @@
 <template>
   <Banner @scroll="scrollToSection" />
   <div class="tw-max-w-screen-xl tw-m-auto">
-    <div class="tw-px-12 sm:tw-px-24 md:tw-px-36 lg:tw-px-60 tw-pt-20 xl:tw-pt-14 tw-pb-52 sm:tw-pb-48 md:tw-pb-24">
+    <div class="tw-px-12 sm:tw-px-24 md:tw-px-36 lg:tw-px-60 tw-pt-10 xs:tw-pt-20 xl:tw-pt-14 tw-pb-28 sm:tw-pb-48 md:tw-pb-24">
       <h1 class="tw-mb-2 tw-font-heading tw-font-body name">Mayeul Deries</h1>
       <h2 class="tw-mb-2 tw-font-normal tw-font-body status">Alternant développeur web</h2>
       <div class="tw-h-20">
@@ -29,7 +29,7 @@
         <v-btn :prepend-icon="mdiEmail" variant="outlined" @click="openLink('mailto:mayeul.deries@gmail.com')">
           <span>Email</span>
         </v-btn>
-        <v-btn :prepend-icon="mdiFile" variant="outlined" @click="openPDF('portfolio/src/assets/CV.pdf')">
+        <v-btn :prepend-icon="mdiFile" variant="outlined" @click="openPDF('/portfolio/CV.pdf')">
           <span>Mon CV</span>
         </v-btn>
       </div>
