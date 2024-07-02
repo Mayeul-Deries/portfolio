@@ -3,16 +3,16 @@
   <div class="tw-max-w-screen-xl tw-m-auto">
     <div class="tw-px-12 sm:tw-px-24 md:tw-px-36 lg:tw-px-60 tw-pt-10 xs:tw-pt-20 xl:tw-pt-14 tw-pb-28 sm:tw-pb-48 md:tw-pb-24">
       <h1 class="tw-mb-2 tw-font-heading tw-font-body name">Mayeul Deries</h1>
-      <h2 class="tw-mb-2 tw-font-normal tw-font-body status">Alternant développeur web</h2>
-      <div class="tw-h-20">
-        <v-icon class="down-arrow" size="48" :icon="mdiChevronDown"></v-icon>
-      </div>
-      <p class="tw-mb-6 tw-font-body">
+      <h2 class="tw-mb-6 tw-font-normal tw-font-body status">Alternant développeur web</h2>
+      <p class="tw-mb-2 tw-font-body">
         Actuellement étudiant en BUT Informatique à Grenoble, je termine ma formation en alternance cette année au sein
         de GTRsuite. En tant qu'alternant
         développeur web, j'ai l'opportunité de travailler en méthode agile Scrum sur le développement d'une plateforme
         de Drive-To-Store, tant sur l'aspect frontend que backend.
       </p>
+      <div class="tw-h-20">
+        <v-icon class="down-arrow" size="48" :icon="mdiChevronDown"></v-icon>
+      </div>
       <h2 class="tw-text-3xl tw-mb-1 tw-font-semibold tw-font-body">Mes liens</h2>
       <p class="tw-mb-6 tw-font-body">Retrouvez-moi sur mes réseaux sociaux</p>
       <div class="tw-flex tw-flex-wrap tw-items-center tw-gap-4 tw-flex-shrink">
