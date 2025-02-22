@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify'
-import { mdiBrightness6, mdiCircleHalfFull } from '@mdi/js'
+import { mdiTranslate, mdiCircleHalfFull } from '@mdi/js'
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t, locale } = useI18n()
 const isMenuOpen = ref(false)
 const theme = useTheme()
 const menuItems = [
-  { title: 'Parcours', icon: 'mdiSchool', path: 'parcours' },
-  { title: 'Projets', icon: 'mdiBook', path: 'projects' },
-  { title: 'Compétences', icon: 'mdiToolbox', path: 'skills' },
+  { title: 'banner.parcours', icon: 'mdiSchool', path: 'parcours' },
+  { title: 'banner.projects', icon: 'mdiBook', path: 'projects' },
+  { title: 'banner.skills', icon: 'mdiToolbox', path: 'skills' },
 ]
 
 const emits = defineEmits<{
@@ -61,6 +63,10 @@ function toggleTheme() {
     toggleMenu()
   }
 }
+
+function toggleLanguage() {
+  locale.value = locale.value === 'en' ? 'fr' : 'en'
+}
 </script>
 
 <template>
@@ -69,7 +75,7 @@ function toggleTheme() {
       <v-app-bar-title
         @click="scrollToSection(item.path)"
         class="tw-cursor-pointer tw-mx-2 sm:tw-mx-6 tw-font-semibold tw-font-body navbar-item"
-        >{{ item.title }}</v-app-bar-title
+        >{{ t(item.title) }}</v-app-bar-title
       >
     </div>
     <button
@@ -91,6 +97,7 @@ function toggleTheme() {
     </div>
     <v-spacer />
     <v-btn flat :icon="mdiCircleHalfFull" @click="toggleTheme"></v-btn>
+    <v-btn flat :icon="mdiTranslate" @click="toggleLanguage"></v-btn>
   </v-app-bar>
 </template>
 

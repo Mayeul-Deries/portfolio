@@ -3,6 +3,9 @@ import { computed } from 'vue'
 import { useTheme } from 'vuetify'
 import { mdiSchool, mdiDomain } from '@mdi/js'
 import { createScrollRevealDirective } from 'vue-scroll-reveal'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const theme = useTheme()
 
@@ -50,51 +53,49 @@ const vScrollReveal = createScrollRevealDirective({
     </div>
 
     <v-card class="card c1" v-scroll-reveal>
-      <h3 class="tw-text-center tw-pb-4">Diplôme d'Ingénieur</h3>
+      <h3 class="tw-text-center tw-pb-4">{{ t('timeline.diploma') }}</h3>
       <div class="tw-flex tw-flex-col tw-gap-2">
-        <p class="tw-text-center tw-text-gray-400">IMT Mines Alès (2024 - 2027)</p>
-        <p class="tw-text-center">Diplôme d'Ingénieur Informatique et Réseaux : Développement Logiciel</p>
+        <p class="tw-text-center tw-text-gray-400">{{ t('timeline.diploma_establishment') }}</p>
+        <p class="tw-text-center">{{ t('timeline.diploma_description') }}</p>
       </div>
     </v-card>
 
     <v-card class="card c2" v-scroll-reveal>
-      <h3 class="tw-text-center tw-pb-4">BUT Informatique</h3>
+      <h3 class="tw-text-center tw-pb-4">{{ t('timeline.but') }}</h3>
       <div class="tw-flex tw-flex-col tw-gap-2">
-        <p class="tw-text-center tw-text-gray-400">IUT 2, Grenoble (2021 - 2024)</p>
+        <p class="tw-text-center tw-text-gray-400">{{ t('timeline.but_establishment') }}</p>
         <p class="tw-text-center">
-          BUT Informatique en parcours Réalisation d'Applications : Conception, Développement, Validation
+          {{ t('timeline.but_description') }}
         </p>
       </div>
     </v-card>
 
     <v-card class="card c3" v-scroll-reveal>
-      <h3 class="tw-text-center tw-pb-4">Alternant Développeur Logiciel</h3>
+      <h3 class="tw-text-center tw-pb-4">{{ t('timeline.intern_software_dev') }}</h3>
       <div class="tw-flex tw-flex-col tw-gap-2">
-        <p class="tw-text-center tw-text-gray-400">Capgemini, Bagnols-sur-Cèze (2024 - Present)</p>
+        <p class="tw-text-center tw-text-gray-400">{{ t('timeline.intern_software_dev_establishment') }}</p>
         <p class="tw-text-center">
-          Développement d'un logiciel de GMAO (Gestion de Maintenance Assistée par Ordinateur) et de différents outils
-          annexes (C#, SQL)
+          {{ t('timeline.intern_software_dev_description') }}
         </p>
       </div>
     </v-card>
 
     <v-card class="card c4" v-scroll-reveal>
-      <h3 class="tw-text-center tw-pb-4">Alternant Développeur Web</h3>
+      <h3 class="tw-text-center tw-pb-4">{{ t('timeline.intern_web_dev_gtr') }}</h3>
       <div class="tw-flex tw-flex-col tw-gap-2">
-        <p class="tw-text-center tw-text-gray-400">GTRsuite, Le Bourget-du-Lac (2023 - 2024)</p>
+        <p class="tw-text-center tw-text-gray-400">{{ t('timeline.intern_web_dev_gtr_establishment') }}</p>
         <p class="tw-text-center">
-          Développement d'une plateforme de Drive-To-Store (Vue.js, Node.js, Nest, MongoDB) en méthode agile Scrum
+          {{ t('timeline.intern_web_dev_gtr_description') }}
         </p>
       </div>
     </v-card>
 
     <v-card class="card c5" v-scroll-reveal>
-      <h3 class="tw-text-center tw-pb-4">Stagiaire Développeur Web</h3>
+      <h3 class="tw-text-center tw-pb-4">{{ t('timeline.intern_web_dev_st') }}</h3>
       <div class="tw-flex tw-flex-col tw-gap-2">
-        <p class="tw-text-center tw-text-gray-400">STMicroelectronics, Grenoble (2023)</p>
+        <p class="tw-text-center tw-text-gray-400">{{ t('timeline.intern_web_dev_st_establishment') }}</p>
         <p class="tw-text-center">
-          Chargé de la mise à jour des bibliothèques Node au sein de différents outils et développement de
-          fonctionnalités (Vue.js, Node.js, MongoDB)
+          {{ t('timeline.intern_web_dev_st_description') }}
         </p>
       </div>
     </v-card>
