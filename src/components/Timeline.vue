@@ -28,46 +28,36 @@ const vScrollReveal = createScrollRevealDirective({
       <div class="ligne tw-hidden xs:tw-block" :class="couleur"></div>
     </div>
     <div class="label l1" :class="couleur">
-      <span class="tw-text-lg tw-font-medium" :class="inversedColor">EXPÉRIENCES</span>
-    </div>
-    <div class="rond r1 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
-      <v-icon :class="inversedColor">{{ mdiDomain }}</v-icon>
-    </div>
-    <div class="rond r2 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
-      <v-icon :class="inversedColor">{{ mdiDomain }}</v-icon>
-    </div>
-    <div class="label l2" :class="couleur">
       <span class="tw-text-lg tw-font-medium" :class="inversedColor">FORMATIONS</span>
     </div>
-    <div class="rond r3 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
+    <div class="rond r1 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
       <v-icon :class="inversedColor">{{ mdiSchool }}</v-icon>
     </div>
-    <div class="rond r4 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
+    <div class="rond r2 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
       <v-icon :class="inversedColor">{{ mdiSchool }}</v-icon>
+    </div>
+    <div class="label l2" :class="couleur">
+      <span class="tw-text-lg tw-font-medium" :class="inversedColor">EXPÉRIENCES</span>
+    </div>
+    <div class="rond r3 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
+      <v-icon :class="inversedColor">{{ mdiDomain }}</v-icon>
+    </div>
+    <div class="rond r4 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
+      <v-icon :class="inversedColor">{{ mdiDomain }}</v-icon>
+    </div>
+    <div class="rond r5 tw-hidden xs:tw-flex xs:tw-justify-center xs:tw-items-center" :class="couleur">
+      <v-icon :class="inversedColor">{{ mdiDomain }}</v-icon>
     </div>
 
     <v-card class="card c1" v-scroll-reveal>
-      <h3 class="tw-text-center tw-pb-4">Alternant Développeur Web</h3>
+      <h3 class="tw-text-center tw-pb-4">Diplôme d'Ingénieur</h3>
       <div class="tw-flex tw-flex-col tw-gap-2">
-        <p class="tw-text-center tw-text-gray-400">GTRsuite, Le Bourget-du-Lac (2023 - 2024)</p>
-        <p class="tw-text-center">
-          Développement d'une plateforme de Drive-To-Store (Vue.js, Node.js, Nest, MongoDB) en méthode agile Scrum
-        </p>
+        <p class="tw-text-center tw-text-gray-400">IMT Mines Alès (2024 - 2027)</p>
+        <p class="tw-text-center">Diplôme d'Ingénieur Informatique et Réseaux : Développement Logiciel</p>
       </div>
     </v-card>
 
     <v-card class="card c2" v-scroll-reveal>
-      <h3 class="tw-text-center tw-pb-4">Stagiaire Développeur Web</h3>
-      <div class="tw-flex tw-flex-col tw-gap-2">
-        <p class="tw-text-center tw-text-gray-400">STMicroelectronics, Grenoble (2023)</p>
-        <p class="tw-text-center">
-          Chargé de la mise à jour des bibliothèques Node au sein de différents outils et développement de
-          fonctionnalités (Vue.js, Node.js, MongoDB)
-        </p>
-      </div>
-    </v-card>
-
-    <v-card class="card c3" v-scroll-reveal>
       <h3 class="tw-text-center tw-pb-4">BUT Informatique</h3>
       <div class="tw-flex tw-flex-col tw-gap-2">
         <p class="tw-text-center tw-text-gray-400">IUT 2, Grenoble (2021 - 2024)</p>
@@ -77,15 +67,35 @@ const vScrollReveal = createScrollRevealDirective({
       </div>
     </v-card>
 
-    <v-card class="card c4" v-scroll-reveal>
-      <h3 class="tw-text-center tw-pb-4">Baccalauréat général</h3>
+    <v-card class="card c3" v-scroll-reveal>
+      <h3 class="tw-text-center tw-pb-4">Alternant Développeur Logiciel</h3>
       <div class="tw-flex tw-flex-col tw-gap-2">
-        <p class="tw-text-center tw-text-gray-400">Lycée Portes de l'Oisans, Vizille (2018 - 2021)</p>
+        <p class="tw-text-center tw-text-gray-400">Capgemini, Bagnols-sur-Cèze (2024 - Present)</p>
         <p class="tw-text-center">
-          Spécialités : Mathématiques, SI, NSI <br />
-          Option : Maths Expertes
+          Développement d'un logiciel de GMAO (Gestion de Maintenance Assistée par Ordinateur) et de différents outils
+          annexes (C#, SQL)
         </p>
-        <p class="tw-text-center">Bac Mention Bien</p>
+      </div>
+    </v-card>
+
+    <v-card class="card c4" v-scroll-reveal>
+      <h3 class="tw-text-center tw-pb-4">Alternant Développeur Web</h3>
+      <div class="tw-flex tw-flex-col tw-gap-2">
+        <p class="tw-text-center tw-text-gray-400">GTRsuite, Le Bourget-du-Lac (2023 - 2024)</p>
+        <p class="tw-text-center">
+          Développement d'une plateforme de Drive-To-Store (Vue.js, Node.js, Nest, MongoDB) en méthode agile Scrum
+        </p>
+      </div>
+    </v-card>
+
+    <v-card class="card c5" v-scroll-reveal>
+      <h3 class="tw-text-center tw-pb-4">Stagiaire Développeur Web</h3>
+      <div class="tw-flex tw-flex-col tw-gap-2">
+        <p class="tw-text-center tw-text-gray-400">STMicroelectronics, Grenoble (2023)</p>
+        <p class="tw-text-center">
+          Chargé de la mise à jour des bibliothèques Node au sein de différents outils et développement de
+          fonctionnalités (Vue.js, Node.js, MongoDB)
+        </p>
       </div>
     </v-card>
   </div>
@@ -93,10 +103,10 @@ const vScrollReveal = createScrollRevealDirective({
 
 <style scoped>
 .line-height {
-  height: 1080px;
+  height: 1350px;
 }
 .ligne {
-  height: 1080px;
+  height: 1350px;
   width: 2px;
   margin: 0 auto;
   border-radius: 5px;
@@ -151,6 +161,9 @@ const vScrollReveal = createScrollRevealDirective({
 .r4 {
   top: 980px;
 }
+.r5 {
+  top: 1200px;
+}
 
 .card {
   width: 400px;
@@ -178,6 +191,10 @@ const vScrollReveal = createScrollRevealDirective({
 .c4 {
   top: 900px;
   left: calc(50% + 270px);
+}
+.c5 {
+  top: 1120px;
+  left: calc(50% - 270px);
 }
 
 @media screen and (max-width: 1000px) {
