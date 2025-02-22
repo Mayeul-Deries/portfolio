@@ -43,6 +43,10 @@ const handleScreenSizeChange = () => {
 
 onMounted(() => {
   window.addEventListener('resize', handleScreenSizeChange)
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme) {
+    theme.global.name.value = savedTheme
+  }
 })
 
 onUnmounted(() => {
@@ -50,7 +54,9 @@ onUnmounted(() => {
 })
 
 function toggleTheme() {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+  const newTheme = theme.global.current.value.dark ? 'light' : 'dark'
+  theme.global.name.value = newTheme
+  localStorage.setItem('theme', newTheme)
   if (isMenuOpen.value) {
     toggleMenu()
   }
