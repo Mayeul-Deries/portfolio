@@ -28,7 +28,7 @@
         <v-btn :prepend-icon="mdiEmail" variant="outlined" @click="openLink('mailto:mayeul.deries@gmail.com')">
           <span>{{ t('home.email') }}</span>
         </v-btn>
-        <v-btn :prepend-icon="mdiFile" variant="outlined" @click="openPDF('/portfolio/CV.pdf')">
+        <v-btn :prepend-icon="mdiFile" variant="outlined" @click="openPDF('/portfolio/Resume.pdf')">
           <span>{{ t('home.cv') }}</span>
         </v-btn>
       </div>
