@@ -46,8 +46,12 @@ const handleScreenSizeChange = () => {
 onMounted(() => {
   window.addEventListener('resize', handleScreenSizeChange)
   const savedTheme = localStorage.getItem('theme')
+  const savedLocale = localStorage.getItem('locale')
   if (savedTheme) {
     theme.global.name.value = savedTheme
+  }
+  if (savedLocale) {
+    locale.value = savedLocale
   }
 })
 
@@ -66,6 +70,7 @@ function toggleTheme() {
 
 function toggleLanguage() {
   locale.value = locale.value === 'en' ? 'fr' : 'en'
+  localStorage.setItem('locale', locale.value)
 }
 </script>
 
@@ -91,7 +96,7 @@ function toggleLanguage() {
     <div class="tw-block md:tw-hidden mobile-menu" v-if="isMenuOpen">
       <div v-for="(item, index) in menuItems" :key="index" @click="scrollToSection(item.path)">
         <span class="navbar-item">
-          {{ item.title }}
+          {{ t(item.title) }}
         </span>
       </div>
     </div>
