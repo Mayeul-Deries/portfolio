@@ -35,7 +35,7 @@
     </div>
     <div class="tw-px-12 sm:tw-px-24 max-xs:tw-pb-20" id="parcours">
       <h2 class="tw-text-3xl tw-font-semibold tw-font-body">{{ t('timeline.title') }}</h2>
-      <Timeline />
+      <Timeline :key="theme.global.name.value + locale" />
     </div>
     <div class="tw-pb-20" id="projects">
       <h2 class="tw-px-12 sm:tw-px-24 tw-text-3xl tw-font-semibold tw-font-body">{{ t('projects.title') }}</h2>
@@ -55,8 +55,11 @@ import Projects from '../components/Projects.vue'
 import Skills from '../components/Skills.vue'
 import { mdiChevronDown, mdiGithub, mdiLinkedin, mdiEmail, mdiFile } from '@mdi/js'
 import { useI18n } from 'vue-i18n'
+import { useTheme } from 'vuetify'
 
 const { t, locale } = useI18n()
+
+const theme = useTheme()
 
 const openLink = (url: string) => {
   window.open(url, '_blank')
